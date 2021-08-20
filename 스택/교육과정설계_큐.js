@@ -3,10 +3,12 @@ const sol = (need, plan) =>{
     let queue = need.split('');
     for(let x of plan){
         if(queue.includes(x)){
-            if(X != queue.shift()) return "NO";
+            if(x !== queue.shift()){
+                return "NO";
+            }
         }
     }
-
+    if(queue.length>0) return "NO";
     return answer;
 }
 
