@@ -1,21 +1,17 @@
 const sol = (nums) =>{
-    let result =[];
-
-    let faker = [];
+    let result =0;
     let sum =0;
     for(let i = 0; i<nums.length; i++){
-           sum+=nums[i]
-           
+           sum+=nums[i];
     }
 
-    sum = sum/nums.length
-    console.log(sum);
+    sum/=nums.length;
 
-    // for(let i = 0; i<nums.length; i++){
-    //     for(let j = i+1; j< nums.length; j++){
-    //        sum+=nums[i]
-    //     }
-    // }
+    for(let i = 0; i<nums.length; i++){
+        if(nums[i] > sum){
+            result += nums[i] - sum;
+        }
+    }
    
     return result;
 }
