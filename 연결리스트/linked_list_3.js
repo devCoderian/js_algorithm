@@ -46,19 +46,27 @@ LinkedList.prototype.append = function(value){
 }
 //insert() : position 위치에 노드 추가
 LinkedList.prototype.insert = function(value, position = 0){
+    //포지션 범위 체크
     if(position < 0 || position > this.length){
         return false;
     }
+    //인덱스 현재 위치 저장
+    //prev 이전 노드값
+    //current 인덱스를 순환하면서 내가 들어가야할 노드의 앞위치를 찾는다.
     let node = new Node(value), current = this.head, index = 0, prev;
     
+    //첫번째에 넣어라
+    // 0번째 
     if(position === 0){
-        node.next = current;
-        this.head = node;
+        node.next = current; //현재 head는 null next에 null을 넣고
+        this.head = node; //head에 node 넣기
     }else{
+        //다른 포지션 만큼 인덱스 순회
         while(index++<position){
-            prev = current;
-            current = current.next;
+            prev = current; //처음에는 헤드의 노드
+            current = current.next; // 헤드의 넥스트 //처음에는 널 ->
         }
+        //새로운 노드 연결
         node.next = current;
         prev.next = node;
     }
