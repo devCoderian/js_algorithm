@@ -29,18 +29,4 @@ function min(arr){
 //     console.log(`arr${arr}`);
 // }
 
-// console.log(result);
-
-const App = () =>{
-    const [value, setValue] = useState("");
-
-
-    useEffect(() =>{
-
-    }, []);
-
-    return(
-        <input value = {} onChange= {() => setValue(e.target.value)}/>
-    
-        )
-}
+console.log(result);
