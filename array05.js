@@ -5,7 +5,7 @@ const sol = (nums) =>{
     for(let i = 0; i<nums; i++){
         //공백처리
        for(let j = 0; j<nums-i-1; j++){
-        str+=" ";
+        str+=" "; 
        }
        for(let j = 0; j<i* 2+1; j++){
         str+="*"

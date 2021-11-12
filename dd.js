@@ -12,4 +12,10 @@ const checkAge = (age) =>{
     }
 }
 
-console.log(checkAge(20))
+console.log(checkAge(20));
+
+const check = () =>{
+    check();
+}
+
+check();

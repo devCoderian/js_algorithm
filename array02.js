@@ -1,11 +1,6 @@
 const sol = (nums) =>{
     let result =[];
     let need = [1, 1, 2, 2, 2, 8];
-    // result = nums.map((num)=>{
-    //     for(let item of need){
-    //         return num-item
-    //     }
-    // })
     for(let i = 0; i<nums.length; i++){
         result[i] = need[i]-nums[i];   
     }
