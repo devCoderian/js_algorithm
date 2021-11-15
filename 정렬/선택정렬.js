@@ -29,4 +29,4 @@ function min(arr){
 //     console.log(`arr${arr}`);
 // }
 
-console.log(result);
+// console.log(result);
