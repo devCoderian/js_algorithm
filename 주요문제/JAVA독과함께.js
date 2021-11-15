@@ -25,20 +25,7 @@ let 독 = [{
 function 징검다리(내구도, 독){
     let answer = [];
     for(let 개별독 of 독){
-        let 독의위치=0;
-        let 실패 = false;
-        while(독의위치 < 내구도.length){ //크게되면 다리를 건넌것이다. 
-            독의위치 += Number(개별독['점프력']);
-            내구도[독의위치-1] -= Number(개별독['몸무게']);
-            if(내구도[독의위치-1] < 0){
-                실패 = true;
-                break;
-            }
-
-        }
-        if(!실패){
-            answer.push(개별독['이름']);
-        }
+        answer.push(개별독['이름']);
     }
 
     return answer;
